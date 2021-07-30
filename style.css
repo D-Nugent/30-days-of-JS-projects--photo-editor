@@ -1,0 +1,259 @@
+/* Root Variables */
+
+/* The below variables are not in use but have been left for show */
+:root {
+  --blur: 0px;
+  --brightness: 100%;
+  --contrast: 100%;
+  --grayscale: 0%;
+  --hue-rotate: 0deg;
+  --invert: 0%;
+  --saturate:100%;
+  --sepia:0%;
+}
+
+/* HTML Resets */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, *, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* --------- */
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  flex-grow: .015;
+}
+
+h1 .emoji-icon{
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+main {
+  display: flex;
+  flex-grow: .9;
+  background-color: whitesmoke;
+}
+
+/* Photo Config Styling */
+
+.photo-config {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: .15;
+  background-color:#f5f5f5;
+  border: 2px solid rgba(0, 0, 0, .25);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, .25);
+  width: 40vw;
+  max-width: 400px;
+  margin: 0 5% 2.5%;
+}
+
+.photo-config__upload{
+  display: flex;
+  flex-direction: column;
+  flex-grow: .1;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.upload-fields{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.upload-fields__icon{
+  letter-spacing: .2em;
+  border: 2px solid black;
+  padding: 2% 4%;
+  width: fit-content;
+  position: relative;
+  bottom: 2px;
+  right: 2px;
+  transition: all    .2s ease-in;
+  box-shadow: 2px 2px 2px black;
+  background-color: #efefef;
+}
+.upload-fields__icon:hover{
+  bottom: 0;
+  right: 0;
+  box-shadow: none;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+
+.upload-fields__file-handler{
+  display: none;
+}
+
+.photo-config__tools{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: .9;
+  padding: 0 0 5%;
+  position: relative;
+}
+
+.tools{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 4%;
+}
+
+.tools__label{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tools__range {
+  overflow: hidden;
+  height: 8px;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  background-color: #c4c4c4;
+}
+
+.tools__range::-webkit-slider-runnable-track {
+  height: 8px;
+  -webkit-appearance: none;
+  color: aquamarine;
+}
+
+.tools__range::-webkit-slider-thumb {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  /* border: 2px solid black; */
+  -webkit-appearance: none;
+  /* background: aquamarine; */
+  box-shadow: -80px 0 0 80px aquamarine;
+}
+
+.tools__range:hover{
+  cursor: pointer;
+}
+
+.tools__output {
+  position: absolute;
+  width: 10%;
+  text-align: center;
+  left: 73.5%;
+  top: 65%;
+  font-size: .8em;
+}
+
+.tools__interact{
+  display: flex;
+  justify-content: space-around;
+}
+
+.tools__btn{
+  letter-spacing: .2em;
+  border: 2px solid black;
+  padding: 2% 4%;
+  width: fit-content;
+  position: relative;
+  bottom: 2px;
+  right: 2px;
+  transition: all    .2s ease-in;
+  box-shadow: 2px 2px 2px black;
+  align-self: center;
+  background-color: #efefef;
+}
+
+.emoji-icon{
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.tools__btn:hover{
+  bottom: 0;
+  right: 0;
+  box-shadow: none;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+
+/* Photo Viewer Styling */
+
+.photo-viewer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: .85;
+  background-color:whitesmoke;
+}
+
+.photo-viewer__canvas{
+  display: none;
+  border: 2px solid black;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 10px 10px 20px black;
+  /* 
+  The below rules would work for assigning the css variables
+  however this doesn't style the canvas directly, rather it acts
+  as an overlay. For the purpose of the project canvas.filter has been
+  used instead.
+  */
+  /* filter: 
+    blur(var(--blur))
+    brightness(var(--brightness))
+    contrast(var(--contrast))
+    grayscale(var(--grayscale))
+    hue-rotate(var(--hue-rotate))
+    invert(var(--invert))
+    saturate(var(--saturate))
+    sepia(var(--sepia)); */
+}
+
+/* Footer Styling */
+
+.sign-off {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid rgba(0, 0, 0, .25);
+  background-color: aquamarine;
+  flex-grow: .1;
+}
+
+.sign-off__msg{
+  width: 80%;
+}
+
+.sign-off__msg a{
+  text-decoration-style: double;
+  text-decoration-color: black;
+  font-weight: 800;
+  color: whitesmoke;
+  text-shadow:1px 1px 2px black;
+}

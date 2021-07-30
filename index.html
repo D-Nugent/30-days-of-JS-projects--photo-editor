@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Photo Editor</title>
+</head>
+<body>
+  <header>
+    <h1>Photo Editor <span class="emoji-icon">📷</span></h1>
+  </header>
+  <main>
+    <section class="photo-config">
+      <div class="photo-config__upload">
+        <h2>Upload Image</h2>
+        <div class="upload-fields">
+          <label for="img-upload" class="upload-fields__icon">
+            UPLOAD📂
+          </label>
+          <input 
+            class="upload-fields__file-handler"
+            type="file" 
+            name="img-upload" 
+            id="img-upload">
+        </div>        
+      </div>
+      <div class="photo-config__tools">
+        <h2>Tools</h2>
+        <section class="tools">
+          <label class="tools__label" for="blur">
+            Adjust Blur
+            <input
+              class="tools__range" 
+              type="range" 
+              name="blur" 
+              id="blur"
+              min="0"
+              max="5"
+              value="0"
+              data-measurement="px">
+            <output class="tools__output" name="blur">0</output>
+          </label>
+          <label class="tools__label" for="brightness">
+            Adjust Brightness
+            <input
+              class="tools__range" 
+              type="range" 
+              name="brightness" 
+              id="brightness"
+              min="0"
+              max="200"
+              value="100"
+              data-measurement="%">
+            <output class="tools__output" name="brightness">100</output>
+          </label>
+          <label class="tools__label" for="contrast">
+            Adjust Contrast
+            <input
+              class="tools__range" 
+              type="range" 
+              name="contrast" 
+              id="contrast"
+              min="0"
+              max="200"
+              value="100"
+              data-measurement="%">
+            <output class="tools__output" name="contrast">100</output>
+          </label>
+          <label class="tools__label" for="grayscale">
+            Adjust Grayscale
+            <input
+              class="tools__range" 
+              type="range" 
+              name="grayscale" 
+              id="grayscale"
+              min="0"
+              max="100"
+              value="0"
+              data-measurement="%">
+            <output class="tools__output" name="grayscale">0</output>
+            </label>
+          <label class="tools__label" for="hue-rotate">
+            Adjust Hue Rotation
+            <input
+              class="tools__range" 
+              type="range" 
+              name="hue-rotate"
+              id="hue-rotate"
+              min="0"
+              max="360"
+              value="0"
+              data-measurement="deg">
+            <output class="tools__output" name="hue-rotate">0</output>
+          </label>
+          <label class="tools__label" for="invert">
+            Adjust Inversion
+            <input
+              class="tools__range" 
+              type="range" 
+              name="invert" 
+              id="invert"
+              min="0"
+              max="100"
+              value="0"
+              data-measurement="%">
+            <output class="tools__output" name="invert">0</output>
+
+          </label>
+          <label class="tools__label" for="saturate">
+            Adjust Saturation
+            <input
+              class="tools__range" 
+              type="range" 
+              name="saturate" 
+              id="saturate"
+              min="0"
+              max="500"
+              value="100"
+              data-measurement="%">
+            <output class="tools__output" name="saturate">100</output>
+          </label>
+          <label class="tools__label" for="sepia">
+            Adjust Sepia
+            <input
+              class="tools__range" 
+              type="range" 
+              name="sepia" 
+              id="sepia"
+              min="0"
+              max="100"
+              value="0"
+              data-measurement="%">
+            <output class="tools__output" name="sepia">0</output>
+          </label>
+          <div class="tools__interact">
+            <button class="tools__btn tools__reset">
+              RESET <span class="emoji-icon">↺</span>
+            </button>
+            <button class="tools__btn tools__download">
+              DOWNLOAD 
+              <span class="emoji-icon">▼</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="photo-viewer">
+      <canvas class="photo-viewer__canvas"></canvas>
+    </section>
+  </main>
+  <footer class="sign-off">
+    <p class="sign-off__msg">
+      Thank you for visiting. This photo editor was created by David Nugent, if you
+      would like to see more of his work, check out his portfolio <a href="https://davidnugent.me">here</a> or
+      his gitHub <a href="https://www.github.com/d-nugent">here</a>.
+    </p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
